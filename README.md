@@ -4,8 +4,8 @@ Built a voting ballot application with 4 NFL Teams such that there is a chairper
 
 <small> The smart contract used is based on the example in solidity docs </small>
 
+## Some key Aspects:
 
-## Business Logics handled
 1. Chairperson registers accounts to vote
 2. No other account can register accounts to vote
 3. Can't register already registered user
@@ -13,16 +13,18 @@ Built a voting ballot application with 4 NFL Teams such that there is a chairper
 5. Registered accounts cannot vote twice
 6. Can't vote a person who is not there
 
-## Business logic to be included
-1. State change rules
-2. Save start time as a state variable
+## Live view
+
+![](ballot.png)
 
 ## Prerequisite
+
 1. NodeJs
 2. Metamask (3.14.1)
 3. Truffle (v4.0.4)
 
 ## Instruction for truffle testing
+
 1. Clone the repository to a local folder
 2. Go to the cloned folder using command line
 3. Execute truffle compile
@@ -32,20 +34,19 @@ Built a voting ballot application with 4 NFL Teams such that there is a chairper
 
 This should print the following in the console
 
- Contract: BallotContract
-    ✓ contract deployment
-    ✓ valid users registration
-    ✓ valid voting
-    ✓ validate winner
-    ✓ valid votes
-    ✓ should NOT accept unauthorized registration
-    ✓ should NOT register already registered user
-    ✓ should NOT vote from unauthorized account
-    ✓ should NOT vote twice
-    ✓ should NOT vote unknown person
+Contract: BallotContract
+✓ contract deployment
+✓ valid users registration
+✓ valid voting
+✓ validate winner
+✓ valid votes
+✓ should NOT accept unauthorized registration
+✓ should NOT register already registered user
+✓ should NOT vote from unauthorized account
+✓ should NOT vote twice
+✓ should NOT vote unknown person
 
     10 passing
-
 
 ## Instruction for DApp
 
@@ -59,5 +60,6 @@ This should print the following in the console
 8. Finally, after voting you can click declare winner
 
 Note:
+
 1. To deploy a new instance of the contract exit the npm server and then execute truffle migrate --reset and then start the server again.
 2. The contract is deployed from account[0] i.e the first account in the metamask.
